@@ -1,0 +1,300 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="ru" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Экспресс-редактор</title>
+            <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.netprint.ru/order/express-editor/a6ad9ec4f143b4120b2ba407034eb065?blank_id=19090&amp;style_id=27019&amp;alternative%5B67053%5D=69924&amp;alternative%5B72183%5D=72189" />
+        <meta property="og:title" content="Мобильный экспресс-редактор" />
+        <meta property="og:image" content="https://xcdn.ru/RBalancerWeb/SquidCPG/page=1&amp;itw=1&amp;foe=1&amp;notmakeup=0&amp;lockpage=1&amp;preview_size=720&amp;preview_h=720&amp;q=type%3D2%26template_guid%3Da6ad9ec4f143b4120b2ba407034eb065%26album_id%3D12335725&amp;s=03960c37b1671818682ac7a2715df7bc" />
+                <link rel="icon" type="image/vnd.microsoft.icon" href="https://www.netprint.ru/favicon.ico" />
+        <link rel="stylesheet" href="//static.photoholding.com/etc/chooser/css/theme-darkviolet.css" />
+    <link rel="stylesheet" href="//static.photoholding.com/etc/chooser/css/theme-image-previewer.css" />
+    <script src="https://static.photoholding.com/etc/js/jquery/2.2.4/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+    <script src="https://static.photoholding.com/etc/core.js?124"></script>
+    <script src="https://static.photoholding.com/etc/env.js?124"></script>
+    <script src="https://static.photoholding.com/etc/env.nativeImpl.js?124"></script>
+    <script src="https://static.photoholding.com/etc/js/analytics/globalAnalytics.js?124"></script>
+    <script src="https://static.photoholding.com/etc/js/analytics/env.events.extention.js?124"></script>
+    <script>
+        window.GA = new GlobalAnalytic();
+        GA.init();
+    </script>
+</head>
+<body>
+<style>
+    body {
+        background: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+    #loader {
+        background: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1000;
+        color : #333333;
+        font-size: 16px;
+        font-family: "Arial", "Helvetica" !important;
+    }
+    #progress_message {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+    }
+    fragment {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        height: 100%;
+    }
+    .html5-express-viewport {
+        width: 100%;
+        height: 750px;
+    }
+</style>
+<div id="loader"><div id="progress_message">Загрузка интерфейса...</div></div>
+<div id="measure_marker" style="visibility: hidden; width: 100mm;"></div>
+<script>
+    /**
+     * Обработчик ошибки инициализирует в отдельном блоке,
+     * иначе при синтаксических ошибках в других скриптах код не выполнится и обработчик не будет установлен
+     */
+    window.onerror = function(msg, url, lineNumber, rowNumber, e){
+        document.getElementById('progress_message').innerHTML = '&lt;span style="color: red;"&gt;Ошибка инициализации: ' + msg + '&lt;/span&gt;';
+    }
+</script>
+
+<script src="//static.photoholding.com/etc/h5e/core/bootstrap.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/third_party/md5.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/third_party/lru.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_node_list.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_node.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_document.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_character_data.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_element.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_attr.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_text.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_parser.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xml_factory.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/xpath/xml_xpath.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/utils/rule_serializer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/utils/rule_validator.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/rule_xml_element.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_page.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_region.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_image.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_text.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_gadget.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_mask.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_element.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_part.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_param.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_event.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/template_info.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_xml_factory.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_xml_document.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/book_element_factory.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/meta.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/meta_builder.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/meta_xml_factory.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/meta_xml_document.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/versions/book_compability.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/utils/book_validator.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/utils/book_corrector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/utils/book_outline_builder.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/utils/book_outline_manager.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/constraint/element_constraint.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/constraint/clipart_region_constraint.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/transform/element_transformation_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/transform/region_transform_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/transform/image_transform_helper.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/utils/xml_node_binder.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/permission/book_permision_binder.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/permission/book_permission.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/permission/book_page_permission.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/permission/book_region_permission.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_element_binder.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_page_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_region_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_image_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_text_helper.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/helpers/book_calendar_helper.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/rule/book_rule_binder.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/rule/book_rule.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/rule/book_rule_page.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/rule/book_rule_element.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/xml/book/rule/book_rule_marker.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/base/observer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/base/promise.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/base/property.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/vector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/point.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/line.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/rect.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/transformation.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/distance.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/math/circle.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/graph/color.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/animation/animation.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/animation/property_animation.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/animation/interpolator.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/animation/round_interpolator.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/di/di.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/resources/resources.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/errors/http_error.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/errors/service_error.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_element_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_page_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_region_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_text_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_calendar_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/inspectors/book_child_change_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/context.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/editor.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/preview.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/external_interface.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/scene_manager.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/xml_source.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/network/url_xml_source.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/network/loader.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/network/url_resolver.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/network/response_error.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/editor/network/url_template_saver.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/layout_params.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/layer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/layer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/image_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/drawable/style.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/drawable/rect_drawable.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/drawable/circle_loader_drawable.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/filters/canvas_filter.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/views/filters/mask_filter.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/events/scene_event.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/events/pointer_event_manager.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/events/mouse_event_listener.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/events/touch_event_listener.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/events/viewport_change_listener.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/events/pull_event_listener.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_layer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_element_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_element_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_spread_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_load_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_page_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_region_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_image_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_gadget_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_text_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_view_factory.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/book_makeup_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/decorations/book_decoration_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/decorations/decoration_view_factory.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/decorations/image_decoration_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/decorations/shadow_decoration_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/decorations/frame_decoration_view.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/filters/book_mask_filter.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/filters/book_argb_filter.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/filters/image_pixel_filter.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/filters/argb_pixel_filter.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/scene.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/viewport.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/float_viewport.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/renders/book_render.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/renders/book_main_render.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/renders/makeup_render.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/renders/decoration_render.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/renders/control_render.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/renders/control_helper_render.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/pivots/rect_pivot.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/pivots/circle_pivot.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/control_layer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/control_spread_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/page_control_layout.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/hover_region_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/clip_region_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/select_region_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/select_image_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/background_image_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/action_image_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/action_region_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/multi_select_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/drop_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/snap_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/image_snap_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/hot_key_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/book/controls/copy_paste_control.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/utils/canvas_text_utils.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/canvas/utils/canvas_support_utils.js?42"></script>
+
+<script src="//static.photoholding.com/etc/h5e/core/transaction/xml_transaction_manager.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/transaction/xml_transaction_inspector.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/transaction/xml_transaction.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/log/logger.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/log/console_handler.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/log/server_log_handler.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/components/load_progress_component.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/components/component_loader.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/components/executor.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/components/promise_executor.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/interface/user_interface_loader.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/utils/gla_events.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/utils/url_replacer.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/utils/auto_save.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/utils/guest_checker.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/utils/date_compat.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/utils/element_rect_compat.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/full.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/phone.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/tablet.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/embed.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/outline.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/express.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/h5e/core/hidden.cfg.js?42"></script>
+<script src="//static.photoholding.com/etc/js_min/photo_chooser.js?14"></script>
+<script>
+    (function () {
+        var config = {"@interfaceBasePath":"\/\/static.photoholding.com\/etc\/h5e\/interface\/","@interfaceVersion":"66","@pageUrl":"\/order\/express-editor\/a6ad9ec4f143b4120b2ba407034eb065?blank_id=19090&amp;style_id=27019&amp;alternative%5B67053%5D=69924&amp;alternative%5B72183%5D=72189","@basePageUrl":"\/order\/194\/","@metaUrl":"https:\/\/ws01.photoholding.com\/ru\/218\/getTemplateMetaXML\/","@bookUrl":"https:\/\/ws01.photoholding.com\/ru\/218\/getTemplate\/a6ad9ec4f143b4120b2ba407034eb065?blank_id=19090&amp;style_id=27019","@saveUrl":"https:\/\/ws01.photoholding.com\/ru\/217\/saveTemplateXML\/5ebe9ad49d234865597d4a1928ea59be\/17902f7d1c15053b5cd65a87a87d7b3e\/2a0a27735be6461f811bbd22747cd597\/a6ad9ec4f143b4120b2ba407034eb065\/63b13c1378d9c670f11a8df4c1dcbeb6\/","@submitUrl":"\/order\/175\/?TOKEN=","@uploadUrl":"https:\/\/upload-balanced.photoholding.com\/getFile.p","@priceUrl":"https:\/\/ws01.photoholding.com\/ru\/246\/5ebe9ad49d234865597d4a1928ea59be","@systemUserSignature":"5ebe9ad49d234865597d4a1928ea59be","@userGuid":"2a0a27735be6461f811bbd22747cd597","@makeHref":"\/order\/","@photoUrl":"\/order\/52\/","@shareUrl":"\/order\/174\/","@projectGuid":"3993c75d4981f69a18b4d6ec83c55c25","@wsUrl":"https:\/\/ws01.photoholding.com\/ru\/","@socialConst":{"yandex_disk_id":"","yandex_app_id":"baa91c423686473f8314148af855dbd4","google_client_id":"728815109032-pbuitq35qf4jgcvl6d32ij1evl5v10ge.apps.googleusercontent.com","vk_app_id":"2242771","fb_app_id":"829008077153273","mail_app_id":"652874","mail_api_private":"e380503a083b1854508bda7526fb5bd8","flickr_api_key":"da25b39cf3b2726540c122658a9435fa","instagram_app_id":"9ad796e5781646fab21d8ca166439496","ok_app_id":93606912,"ok_app_key":"CBAFFFJGABABABABA","ok_app_redirect_url":"https:\/\/www.netprint.ru\/order\/social-auth\/odkl"},"@poolUrl":"\/order\/171\/","@savePoolUrl":"https:\/\/ws01.photoholding.com\/ru\/217\/saveTemplatePool\/5ebe9ad49d234865597d4a1928ea59be\/17902f7d1c15053b5cd65a87a87d7b3e\/2a0a27735be6461f811bbd22747cd597\/a6ad9ec4f143b4120b2ba407034eb065\/a4aa220a7f6d071e5037e9395422b09a\/","@getPoolUrl":"https:\/\/ws01.photoholding.com\/ru\/217\/getTemplatePool\/5ebe9ad49d234865597d4a1928ea59be\/17902f7d1c15053b5cd65a87a87d7b3e\/2a0a27735be6461f811bbd22747cd597\/a6ad9ec4f143b4120b2ba407034eb065\/d173e84b4ef69a02b2af17c4d86609a4\/","@helpUrl":"\/order\/339\/","@protocols":[],"@selectedAlternatives":["69924","72189"],"@templateMode":"origin","@shareToken":null,"@isDesigner":false,"@themePath":"themes\/darkviolet\/css\/theme-darkviolet.css?66","@menu":[{"name":"Главная","href":"https:\/\/www.netprint.ru\/moscow\/"},{"name":"Каталог","href":"https:\/\/www.netprint.ru\/moscow\/catalog"},{"nav_id":"39","ico":"fa fa fa-upload","subtitle":"Добавить и напечатать","href":"\/\/www.netprint.ru\/order\/39\/","name":"Загрузка фотографий"},{"nav_id":"326","ico":"far fa-images","subtitle":"","href":"\/\/www.netprint.ru\/order\/326\/","name":"Мои альбомы"},{"nav_id":"178","ico":"fa fa-book-open","subtitle":"Сохраненные макеты","href":"\/\/www.netprint.ru\/order\/178\/","name":"Мои макеты"},{"nav_id":"41","ico":"fa fa-history","subtitle":"","href":"\/\/www.netprint.ru\/order\/41\/","name":"История заказов"},{"nav_id":"42","ico":"fa fa-wallet","subtitle":"","balance":"1.00","currency":"руб.","href":"\/\/www.netprint.ru\/order\/42\/","name":"Мои финансы"},{"nav_id":"234","ico":"fa fa-gifts","subtitle":"","balance":0,"currency":"баллов","href":"\/\/www.netprint.ru\/order\/234\/","name":"Бонусы и скидки"},{"nav_id":"227","ico":"fa fa-user-plus","subtitle":"Партнёрская программа","href":"\/\/www.netprint.ru\/order\/227\/","name":"Пригласи друга"},{"nav_id":"206","ico":"far fa-comments","subtitle":"Архив сообщений","href":"\/\/www.netprint.ru\/order\/206\/","name":"Обратная связь"},{"nav_id":"252","ico":"fa fa-globe","subtitle":"Ваши персональные сайты","href":"\/\/www.netprint.ru\/order\/252\/","name":"Мои сайты"},{"nav_id":"365","ico":"fa fa-cogs","subtitle":"Смена пароля и логина","href":"\/\/www.netprint.ru\/order\/365\/","name":"Настройки"},{"nav_id":"74","ico":"fa fa-sign-out-alt","subtitle":"","attrs":"ga-action=\"click\" ga-action-click-type=\"click.signOut\" data-action=\"user.logout\"","href":"\/\/www.netprint.ru\/order\/74\/","name":"Выход"}],"@mobileVersionUrl":"\/order\/194\/a6ad9ec4f143b4120b2ba407034eb065\/?blank_id=19090&amp;style_id=27019&amp;alternative%5B67053%5D=69924&amp;alternative%5B72183%5D=72189","@importTemplateWithEventsUrl":"https:\/\/ws01.photoholding.com\/ru\/217\/getTemplateWithEvents\/5ebe9ad49d234865597d4a1928ea59be\/2a0a27735be6461f811bbd22747cd597\/bb9d9ee6ee5c2cbc68307fcaee31d5e1","@importEventUrl":"https:\/\/ws01.photoholding.com\/ru\/217\/getEvents\/5ebe9ad49d234865597d4a1928ea59be\/2a0a27735be6461f811bbd22747cd597\/27c83ce3c7a6404119bf794abee91307","@logged":true,"@postRegistration":false,"@logUrl":"https:\/\/www.netprint.ru\/order\/save_events?action=h5e","@onlineEditorUrl":"\/order\/338\/","@myMaketUrl":"\/order\/178\/","@presetPhotos":null,"@staticResourceVersion":124,"@presetMacros":null,"@videoInstructionsUrl":"https:\/\/ws01.photoholding.com\/ru\/306\/Editor\/getVideoInstructions\/5ebe9ad49d234865597d4a1928ea59be\/","@photoChooserConfig":{"@photoUrl":"\/order\/52\/","@systemUserSignature":"5ebe9ad49d234865597d4a1928ea59be","@userGuid":"2a0a27735be6461f811bbd22747cd597","@uploadUrl":"https:\/\/upload-balanced.photoholding.com\/getFile.p","@authUrl":"\/order\/71\/?url=","@logged":true,"@postRegistration":false,"@clipartAlbumUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Elements\/getDefaultAlbums\/5ebe9ad49d234865597d4a1928ea59be\/","@clipartPhotoUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Elements\/getDefaultElements\/5ebe9ad49d234865597d4a1928ea59be\/","@myClipartAlbumUrl":"https:\/\/ws01.photoholding.com\/ru\/283\/Elements\/getAlbums\/5ebe9ad49d234865597d4a1928ea59be\/2a0a27735be6461f811bbd22747cd597\/","@myClipartPhotoUrl":"https:\/\/ws01.photoholding.com\/ru\/283\/Elements\/getElements\/5ebe9ad49d234865597d4a1928ea59be\/2a0a27735be6461f811bbd22747cd597\/","@stylesAlbumsUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Styles\/getStylesList\/5ebe9ad49d234865597d4a1928ea59be\/","@stylesPhotosUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Styles\/getStyle\/5ebe9ad49d234865597d4a1928ea59be\/","@layoutAlbumsUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Layouts\/getLayouts\/5ebe9ad49d234865597d4a1928ea59be\/","@layoutPhotosUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Layouts\/getLayouts\/5ebe9ad49d234865597d4a1928ea59be\/","@calendarAlbumsUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Grids\/getGroups\/5ebe9ad49d234865597d4a1928ea59be\/","@calendarPhotosUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Grids\/getList\/5ebe9ad49d234865597d4a1928ea59be\/","@fontsAlbumsUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Fonts\/getGroups\/5ebe9ad49d234865597d4a1928ea59be\/","@fontsPhotosUrl":"https:\/\/ws01.photoholding.com\/ru\/281\/Fonts\/getList\/5ebe9ad49d234865597d4a1928ea59be\/","@protocols":[],"@isDesigner":false}};
+        var di = new DI(config);
+
+        var isDesktop = window.matchMedia("only screen and (min-width: 1024px)").matches;
+        var isTablet = window.matchMedia("only screen and (min-width: 480px)").matches;
+        if (isDesktop){
+            var cfg = H5B_CFG['express.full'];
+            cfg['@profile'] = 'express';
+            cfg['@interfacePath'] = "\/order\/361\/";
+            di.inject(cfg);
+        } else if (isTablet){
+            var cfg = H5B_CFG['book.tablet'];
+            cfg['@profile'] = 'express tablet';
+            cfg['@interfacePath'] = 'tablet.html';
+            di.inject(cfg);
+        } else {
+            var cfg = H5B_CFG['book.phone'];
+            cfg['@profile'] = 'express phone';
+            cfg['@interfacePath'] = 'mobile.html';
+            di.inject(cfg);
+        }
+    })();
+</script>
+
+
+</body></html>
