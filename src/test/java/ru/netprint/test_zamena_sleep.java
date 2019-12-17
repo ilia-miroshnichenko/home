@@ -97,10 +97,10 @@ public class test_zamena_sleep {
         driver.findElement(By.id("login_button")).click();
         waitForPageLoad(10, ExpectedConditions.elementToBeClickable(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Мои альбомы'])[3]/following::i[1]")));
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Мои альбомы'])[3]/following::i[1]")).click();
-        waitForPageLoad(10, ExpectedConditions.elementToBeClickable(By.xpath("//main[@id='main']/nav/ul/li[4]/a")));
+        
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[4]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[5]/a")).click();
-        waitForPageLoad(10, ExpectedConditions.elementToBeClickable(By.xpath("//main[@id='main']/nav/div/a/i")));
+
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
         driver.findElement(By.xpath("//ul[@id='nav-menu-overflow']/li/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
