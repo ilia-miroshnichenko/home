@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -41,23 +42,20 @@ public class Proxodnou_test {
         driver.findElement(By.id("pass_field")).clear();
         driver.findElement(By.id("pass_field")).sendKeys("DaKycc76");
         driver.findElement(By.id("auth_login_field")).click();
-         WebDriverWait wait = new WebDriverWait(driver, 5);
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login_button")));
+               WebDriverWait wait = new WebDriverWait(driver, 5);
+               wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login_button")));
         driver.findElement(By.id("login_button")).click();
-
-         WebDriverWait wait3 = new WebDriverWait(driver, 5);
-         wait3.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Дети'])[1]/following::a[1]")));
+               WebDriverWait wait3 = new WebDriverWait(driver, 5);
+               wait3.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Дети'])[1]/following::a[1]")));
          driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Дети'])[1]/following::a[1]")).click();
-
-         WebDriverWait wait31 = new WebDriverWait(driver, 5);
-         wait31.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Другие темы'])[1]/following::div[6]")));
+               WebDriverWait wait31 = new WebDriverWait(driver, 5);
+               wait31.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Другие темы'])[1]/following::div[6]")));
          driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Другие темы'])[1]/following::div[6]")).click();
-
-
+               WebDriverWait wait30 = new WebDriverWait(driver, 5);
+         //wait30.until(ExpectedCondition.visibilityOfElementLocated(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='поздравить всех близких'])[1]/following::i[1]")));
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='поздравить всех близких'])[1]/following::i[1]")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[2]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[3]/a")).click();
-
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[4]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[5]/a")).click();
                TimeUnit.SECONDS.sleep(2);
@@ -69,7 +67,6 @@ public class Proxodnou_test {
                TimeUnit.SECONDS.sleep(2);
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
         driver.findElement(By.xpath("//ul[@id='nav-menu-overflow']/li[3]/a")).click();
-
         driver.findElement(By.id("login_name")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Смена пароля и логина'])[1]/following::i[1]")).click();
     }
@@ -84,27 +81,28 @@ public class Proxodnou_test {
         driver.findElement(By.id("pass_field")).sendKeys("DaKycc76");
         driver.findElement(By.id("auth_login_field")).click();
         driver.findElement(By.id("login_button")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Мои альбомы'])[3]/following::i[1]")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[4]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/ul/li[5]/a")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
         driver.findElement(By.xpath("//ul[@id='nav-menu-overflow']/li/a")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
         driver.findElement(By.xpath("//ul[@id='nav-menu-overflow']/li[2]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.xpath("//ul[@id='nav-menu-overflow']/li[3]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.xpath("//ul[@id='nav-menu-overflow']/li[4]/a")).click();
         driver.findElement(By.xpath("//main[@id='main']/nav/div/a/i")).click();
-               TimeUnit.SECONDS.sleep(2);
+
         driver.findElement(By.id("login_name")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Смена пароля и логина'])[1]/following::i[1]")).click();
+
     }
 
     @Test
@@ -274,6 +272,7 @@ public class Proxodnou_test {
         driver.findElement(By.id("select2-select_city-container")).click();
                TimeUnit.SECONDS.sleep(3);
         driver.findElement(By.id("select2-select_city-container")).click();
+               TimeUnit.SECONDS.sleep(2);
         driver.findElement(By.id("select2-select_city-container")).click();
                TimeUnit.SECONDS.sleep(3);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='LiveTex'])[6]/following::input[1]")).clear();
@@ -317,7 +316,6 @@ public class Proxodnou_test {
                TimeUnit.SECONDS.sleep(2);
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Смена пароля и логина'])[1]/following::i[1]")).click();
     }
-
 
     @Test
     public void testZakaz() throws Exception {
@@ -870,7 +868,6 @@ public class Proxodnou_test {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Смена пароля и логина'])[1]/following::i[1]")).click();
     }
 
-
      @Test
      public void test_Bce_prodyktu_B_korzune_is_mou_albomu() throws Exception {
         driver.get("https://www.netprint.ru/order/profile");
@@ -1154,7 +1151,6 @@ public class Proxodnou_test {
         driver.findElement(By.id("send_sms")).click();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Телефон для отправки информации о заказе'])[1]/following::i[1]")).click();
     }
-
 
     @After
     public void tearDown() throws Exception {
